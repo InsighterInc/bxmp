@@ -33,7 +33,7 @@ Now that you have a fully-functioning BitMED environment set up, let's run the 7
 
 ```sh
 # (from within vagrant env, use `vagrant ssh` to enter)
-ubuntu@ubuntu-xenial:~$ cd BXMP-examples/7nodes
+ubuntu@ubuntu-xenial:~$ cd bxmp-examples/7nodes
 
 $ ./raft-init.sh
 # (output condensed for clarity)
