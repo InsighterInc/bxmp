@@ -10,11 +10,11 @@ fi
 # Create fake Go workspace if it doesn't exist yet.
 workspace="$PWD/build/_workspace"
 root="$PWD"
-ethdir="$workspace/src/github.com/bitmed"
-if [ ! -L "$ethdir/BXMP" ]; then
+ethdir="$workspace/src/github.com/InsighterInc"
+if [ ! -L "$ethdir/bxmp" ]; then
     mkdir -p "$ethdir"
     cd "$ethdir"
-    ln -s ../../../../../. BXMP
+    ln -s ../../../../../. bxmp
     cd "$root"
 fi
 
@@ -23,8 +23,8 @@ GOPATH="$workspace"
 export GOPATH
 
 # Run the command inside the workspace.
-cd "$ethdir/BXMP"
-PWD="$ethdir/BXMP"
+cd "$ethdir/bxmp"
+PWD="$ethdir/bxmp"
 
 # Launch the arguments with the configured environment.
 exec "$@"
